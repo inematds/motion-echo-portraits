@@ -1,0 +1,31 @@
+{
+  "files": {
+    "scene1": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-7750675f-9fb3-4bd9-bc81-d81e0335b044.png",
+    "scene2": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-e71eaa52-449f-44be-b4b1-f750cfe805c0.png",
+    "scene3": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-ba009611-fcd7-4673-b582-e62aa8ea6f1f.png",
+    "scene4": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-0ede3b56-7d35-4f9a-b382-c5f2e8c8b3e4.png",
+    "scene_trilha": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-bf9baea5-3826-4858-acde-d72c78503b86.png"
+  },
+  "prompts": [
+    [
+      "scene1",
+      "Horizontal 16:9 cinematic natural editorial photograph for an adult beginner course. Brazilian woman photographer about 36 with dark curly hair at a modest home studio desk, carefully comparing a printed sharp portrait photograph against an image on a laptop. The laptop display shows a violet motion echo portrait with a crisp main face and one ghosted profile, no legible interface text. Warm real desk light with a hint of purple screen light. Show the practical decision of selecting a clear identity reference. No letters, captions, logos, watermarks, robots or futuristic interfaces. Professional relatable calm scene."
+    ],
+    [
+      "scene2",
+      "Horizontal 16:9 natural editorial photo for an adult education lesson. Brazilian man social media professional about 54, short salt-and-pepper hair and glasses, seated at a simple creative workplace using a tablet in landscape orientation. Tablet shows a cyan portrait with sharply defined main face and horizontal cyan trailing lines only behind the head. His finger hovers near the rear silhouette to inspect the trail. Show a believable work moment, clean daylight, subtle cyan glow, notebook with no readable writing. No words, logos, watermarks or science fiction."
+    ],
+    [
+      "scene3",
+      "Horizontal 16:9 natural editorial photography for an adult beginner course. Brazilian woman photographer 36 with dark curly hair and ordinary dark casual clothes, at a studio table examining two printed vertical scarlet portraits, comparing the main face and red motion streaks. One print held closer, others neatly on desk, photographer concentrated; laptop in background with blurred shapes only. Realistic lighting, restrained warm red accent reflected from the prints, no readable text, no labels, logos, robots, holograms or watermarks. Communicate deliberate review of an artistic portrait."
+    ],
+    [
+      "scene4",
+      "Horizontal 16:9 natural editorial photograph for a beginner creative course. Brazilian man social media professional 54 with gray hair and glasses reviewing four vertical portrait prints neatly arranged on a desk: violet, cyan, scarlet, electric blue; each print has a crisp face with motion trails. He holds the blue print and compares the collection. Contemporary small office, natural daylight, real paper texture, no readable text on any screen or paper, no typography, logos, watermark or futuristic effect outside the prints."
+    ],
+    [
+      "scene_trilha",
+      "Horizontal 16:9 editorial photograph for an adult beginner course cover. Two Brazilian creative professionals, woman photographer 36 with dark curly hair and man social media professional 54 with gray hair and glasses, collaboratively reviewing four portrait prints on a clean studio desk: violet ghost echo, cyan dissolution, scarlet pixel drag, electric-blue long exposure. Both are working and looking at the actual prints. A laptop in background with indistinct shapes, natural studio light, realistic accessible environment, mature editorial composition, people clearly visible. No readable text, logos, watermarks, robots or holograms."
+    ]
+  ]
+}

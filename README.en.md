@@ -12,4 +12,8 @@ Open `guia/en/index.html` in a browser to read locally. Copying prompts works ov
 
 The site is static and does not send photos or call generators. The four original English prompts were supplied by the user from the AVCC · AI Video Creators guide. The explanations and exercises are INEMA additions. They have not yet been tested through image generation in this release.
 
-Version: 1.0.0.
+Version: 1.1.0.
+
+## v6 course
+
+[v6 course](https://inematds.github.io/motion-echo-portraits/en/landing.html) · 4 practical lessons.

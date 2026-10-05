@@ -1,0 +1,30 @@
+{
+  "id": "motion-echo-v6",
+  "titulo": "Motion Echo v6 — Retratos com eco de movimento",
+  "titulo_html": "Um rosto nítido. <em>Quatro formas de movimento.</em>",
+  "curso_curto": "Motion Echo v6",
+  "kicker": "Motion Echo v6 · 4 aulas práticas",
+  "lead": "Crie e revise quatro estilos de retrato: violeta, ciano, escarlate e azul. Uma foto de referência, uma cor por imagem e um ajuste por tentativa.",
+  "imagem_trilha": "assets/img/trilha.webp",
+  "alt_trilha": "Fotógrafa e profissional de redes sociais comparam quatro retratos coloridos para escolher uma série coerente.",
+  "rodape": "Motion Echo v6 · INEMA.CLUB PRO · <a href=\"landing.html\">sobre o curso</a>",
+  "landing": "landing.html",
+  "modulos": [
+    {
+      "titulo": "1. Preserve o rosto",
+      "resumo": "Escolha uma referência e delimite o efeito.",
+      "aulas": [
+        1,
+        2
+      ]
+    },
+    {
+      "titulo": "2. Controle e selecione",
+      "resumo": "Ajuste a intensidade e revise sua série.",
+      "aulas": [
+        3,
+        4
+      ]
+    }
+  ]
+}

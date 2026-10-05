@@ -1,0 +1,14 @@
+
+Auditoria v6 — es/curso.html   (celular 390px, 3 temas)
+1ª visita: trilha 2 controles · aula 3 controles
+
+Aula 1: 10/10 APROVADA  · 176 palavras de prosa · 3 steps · frases >22: 0/20 · visuais reais 3 · cena 56 KB · 15 min
+
+Aula 2: 10/10 APROVADA  · 183 palavras de prosa · 3 steps · frases >22: 0/20 · visuais reais 3 · cena 65 KB · 15 min
+
+Aula 3: 10/10 APROVADA  · 192 palavras de prosa · 3 steps · frases >22: 0/21 · visuais reais 3 · cena 49 KB · 15 min
+
+Aula 4: 10/10 APROVADA  · 187 palavras de prosa · 3 steps · frases >22: 0/19 · visuais reais 3 · cena 62 KB · 15 min
+
+Média: 10.0/10 · aprovadas 4/4
+Lembrete: o critério 1 é proxy — confirme com o leitor simulado (TESTE-HUMANO.md) antes de dar a aula por aprovada.

@@ -1,0 +1,174 @@
+{
+  "checks": [
+    {
+      "lang": "pt",
+      "width": 390,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 390,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 390,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 390,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 1440,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 1440,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 1440,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "pt",
+      "width": 1440,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 390,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 390,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 390,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 390,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 1440,
+      "lesson": 1,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 1440,
+      "lesson": 2,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 1440,
+      "lesson": 3,
+      "overflow": false,
+      "badImages": 0
+    },
+    {
+      "lang": "es",
+      "width": 1440,
+      "lesson": 4,
+      "overflow": false,
+      "badImages": 0
+    }
+  ],
+  "jsErrors": [],
+  "languageSwitchPreservesLesson": true
+}

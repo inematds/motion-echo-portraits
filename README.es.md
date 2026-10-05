@@ -12,4 +12,8 @@ Abre `guia/es/index.html` en el navegador para leerla de forma local. La copia d
 
 El sitio es estático y no envía fotos ni llama a generadores. El usuario proporcionó los cuatro prompts originales en inglés de la guía AVCC · AI Video Creators. Las explicaciones y los ejercicios son complementos de INEMA. Todavía no se han probado mediante generación en esta entrega.
 
-Versión: 1.0.0.
+Versión: 1.1.0.
+
+## Curso v6
+
+[Curso v6](https://inematds.github.io/motion-echo-portraits/es/landing.html) · 4 clases prácticas.

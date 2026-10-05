@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-05",
+  "version": "1.1.0",
+  "format": "v6",
+  "languages": {
+    "pt": {
+      "lessons": 4,
+      "practices": 4,
+      "reviewCards": 12,
+      "audit": "4/4 lessons: 10/10",
+      "engine": "26/26"
+    },
+    "en": {
+      "lessons": 4,
+      "practices": 4,
+      "reviewCards": 12,
+      "audit": "4/4 lessons: 10/10",
+      "engine": "26/26"
+    },
+    "es": {
+      "lessons": 4,
+      "practices": 4,
+      "reviewCards": 12,
+      "audit": "4/4 lessons: 10/10",
+      "engine": "26/26"
+    }
+  },
+  "humanTest": false,
+  "publication": "pending explicit GitHub API authorization"
+}
