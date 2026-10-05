@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion Echo Portraits — A guide to motion echo portraits</title>
+<meta name="description" content="Learn to preserve the face, control trails and build four neon portrait styles with adapted prompts and practical review.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/motion-echo-portraits/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/motion-echo-portraits/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/motion-echo-portraits/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div,.card{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+
+pre{white-space:pre-wrap;overflow-wrap:anywhere} .reading{max-width:74ch} .copy{margin:8px 0 20px;cursor:pointer;border:0} :focus-visible{outline:3px solid var(--sky);outline-offset:4px} section{scroll-margin-top:125px} .hero .wrap{grid-template-columns:1fr}.hero p.lead{max-width:65ch} .table-wrap{overflow-x:auto} table{border-collapse:collapse;width:100%;min-width:540px}th,td{padding:14px;text-align:left;border-bottom:1px solid var(--line)}textarea{width:100%;min-height:120px;background:var(--bg2);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:14px;font:inherit}button{font:inherit} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}} body.light nav{background:var(--bg)}
+body.light a:not(.btn):not(.inema):not(.pro),body.light .amb{color:#8b580f}
+</style>
+</head>
+
+<body><nav><div class="wrap"><a class="brand" href="#top">Motion Echo</a><span class="sep">|</span><span class="clubpro"><a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a><span class="sep">-</span><a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a></span><div class="links"><a class="sec" href="#guia">User guide</a><a class="sec" href="#prompts">4 prompts</a><span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span><button class="tgl" id="themeToggle" aria-label="Toggle theme">🌙</button></div></div></nav>
+<header class="hero" id="top"><div class="wrap"><div><h1>Portraits with <span class="amb">motion echoes</span></h1><p class="lead">Turn one photo into four neon editorial styles. Learn to keep the face recognizable while controlling the color, direction and intensity of the trails.</p><div class="cta"><a class="btn" href="#guia">Create my first portrait</a><a class="btn ghost" href="#prompts">Choose a prompt</a></div><p class="mut">Practical guide · approximately 12 minutes to read · practice in your image generator of choice</p><div class="grid g4 motion-gallery"><a href="#violeta"><img src="../assets/violeta.png" alt="Violet ghost echo" width="941" height="1672" style="display:block;width:100%;height:auto;border-radius:14px"><span>Violet ghost echo</span></a><a href="#ciano"><img src="../assets/ciano.png" alt="Cyan dissolve" width="941" height="1672" style="display:block;width:100%;height:auto;border-radius:14px"><span>Cyan dissolve</span></a><a href="#escarlate"><img src="../assets/escarlate.png" alt="Scarlet pixel drag" width="941" height="1672" style="display:block;width:100%;height:auto;border-radius:14px"><span>Scarlet pixel drag</span></a><a href="#azul"><img src="../assets/azul.png" alt="Electric-blue shutter turn" width="941" height="1672" style="display:block;width:100%;height:auto;border-radius:14px"><span>Electric-blue shutter turn</span></a></div><p class="mut">New AI-generated images for this guide. Fictional people and adapted prompts; these are not the original examples or a demonstration of identity preservation.</p></div></div></header>
+<main>
+<section id="oque"><div class="wrap reading"><h2>The face is the anchor. Motion surrounds it.</h2><p>Motion Echo Portraits is the name of this collection of visual directions for portraits. The supplied material describes a creative technique, not an application you need to install.</p><p>The result combines a sharp main expression with trails suggesting an earlier action. A good echo feels part of the same movement; a disconnected duplicate looks like another person in the scene.</p><p>Make three decisions: <strong>which face to preserve, where the movement goes and which color dominates.</strong> Only then add texture. The four English blocks below reproduce the original prompts supplied by the user from the AVCC · AI Video Creators guide. The explanations and exercises are educational additions by INEMA.</p></div></section>
+<section id="preparo"><div class="wrap reading"><h2>Before opening the generator</h2><ul><li>Choose a sharp portrait with visible eyes, nose and mouth. Favor simple clothing, few accessories and a background without distractions.</li><li>Use a photo of yourself or someone who has authorized this use.</li><li>Open an image tool that accepts a reference photo and editing instructions. Check whether it supports identity preservation; results vary between tools.</li><li>Start with a single photo and a single style. Mixing several references makes it harder to identify what caused a change in the face.</li></ul><p>Button names vary. Look for the option to attach an image or edit an existing image. A style-only reference field may copy the look without preserving identity.</p><p>This guide does not generate images or send your photo to a service. Copy the prompt and practice in your chosen tool.</p></div></section>
+<section id="fluxo"><div class="wrap"><h2>One change per attempt</h2><div class="flow"><span>Sharp reference</span><span class="arr">→</span><span>One color</span><span class="arr">→</span><span>One movement</span><span class="arr">→</span><span>Face review</span><span class="arr">→</span><span>Trail adjustment</span></div><p class="reading">Use the same photo, framing and expression for all four styles. This lets you compare the effect instead of comparing four different people or poses.</p></div></section>
+<section id="guia"><div class="wrap reading"><h2>Your first portrait, step by step</h2>
+<div class="step"><div class="b">1</div><div><h3>Attach the reference</h3><p>Open the editing or reference-based generation feature. Attach only your chosen portrait. Visually confirm it is the right photo before generating.</p></div></div>
+<div class="step"><div class="b">2</div><div><h3>Choose your direction</h3><p>For a first test, use cyan dissolve: a trail around the edges is easier to assess than multiple face positions. If you prefer another style, use only its corresponding prompt.</p></div></div>
+<div class="step"><div class="b">3</div><div><h3>Copy a complete recipe</h3><p>Each recipe below includes identity reference instructions and visual direction. Paste the entire text. In the fourth prompt, replace the two bracketed choices with one color and one outfit. Add the negative guardrails at the end; if there is a dedicated negative prompt field, put those restrictions there.</p></div></div>
+<div class="step"><div class="b">4</div><div><h3>Generate and examine the face first</h3><p>Compare the eyes, nose, mouth, apparent age and hairstyle with the reference. If anything changed, return to the original photo and ask for a weaker effect. Do not use the altered face as a new reference.</p></div></div>
+<div class="step"><div class="b">5</div><div><h3>Correct only what failed</h3><p>If the identity is correct, adjust only the position or strength of the echo. For example: “Keep the main face and color of this version. Reduce the trail intensity and limit it to the edge of the hair.”</p></div></div>
+<div class="step"><div class="b">6</div><div><h3>Save the version and prompt</h3><p>Download the approved result and keep the text you used. Record the tool, date and adjustment. Before using it on a cover or poster, check the crop and dimensions required for that use.</p></div></div>
+</div></section><section id="prompts"><div class="wrap"><h2>Four recipes to copy</h2><p class="sub">Original English prompts, as supplied. The illustrations use new fictional people and adaptations of these styles; the original prompts were not run verbatim. Review the result: preservation instructions do not guarantee perfect identity.</p>
+<article id="violeta"><figure style="margin:24px 0;max-width:400px"><img src="../assets/violeta.png" alt="Violet ghost echo" width="941" height="1672" loading="lazy" style="display:block;width:100%;height:auto;border-radius:14px"></figure><h3>Violet ghost echo</h3><p>A broad, soft residual profile behind the person, with the main face kept sharp.</p><pre id="prompt-violeta">Maintain the exact facial structure, bone features, skin tone, eye shape, and identity of the person from the uploaded reference photo without alteration.
+
+An artistic avant-garde portrait of the subject rendered in a stark, saturated monochromatic violet-purple color grading.
+
+The subject turns their head over their shoulder, looking toward the camera with an intense, melancholic gaze. Behind the primary subject is a faint, enlarged double-exposure ghost silhouette of their profile looking downward, seamlessly integrated into the background.
+
+The portrait transitions into heavy horizontal pixel motion blur and digital scanline smearing running sideways across the frame, creating an echo trail of facial features.
+
+High-contrast studio rim lighting edges the jawline and hair against deep violet-black negative space. Textured CRT television monitor scanlines, subtle chromatic aberration along the motion edges, fine film grain, moody synthwave aesthetic.</pre><button class="btn copy" data-copy="prompt-violeta">Copy prompt</button><p class="reading"><strong>How to review:</strong> Does the secondary profile look like another person? Reduce its opacity and ask for just a residual echo.</p></article>
+<article id="ciano"><figure style="margin:24px 0;max-width:400px"><img src="../assets/ciano.png" alt="Cyan dissolve" width="941" height="1672" loading="lazy" style="display:block;width:100%;height:auto;border-radius:14px"></figure><h3>Cyan dissolve</h3><p>Subtle horizontal trails at the edges, with the center of the face preserved.</p><pre id="prompt-ciano">Maintain the exact facial structure, bone features, skin tone, eye shape, and identity of the person from the uploaded reference photo without alteration.
+
+A cinematic high-concept portrait of the subject in an electric cyan-blue monochromatic wash.
+
+Framed in a medium close-up, the subject looks upward and to the side with an ethereal, lost expression. The front half of the face is rendered in crystal-clear detail, revealing natural skin texture and iris highlights, while the rear half of the head and shoulders dissolve horizontally into fine, long motion blur trails and digital speed lines.
+
+Illuminated by a bright directional cyan key light from the front, with rich deep sapphire shadows. Overlay of subtle VHS tape tracking lines and fine analog grain across the frame. Minimalist styling with a dark crewneck collar. Contemporary music single cover art look, 50mm f/1.8 lens, high dynamic range.</pre><button class="btn copy" data-copy="prompt-ciano">Copy prompt</button><p class="reading"><strong>How to review:</strong> Did the trail cross the mouth? Restrict the dissolve to the hair silhouette and shoulder.</p></article>
+<article id="escarlate"><figure style="margin:24px 0;max-width:400px"><img src="../assets/escarlate.png" alt="Scarlet pixel drag" width="941" height="1672" loading="lazy" style="display:block;width:100%;height:auto;border-radius:14px"></figure><h3>Scarlet pixel drag</h3><p>Warm lighting and stronger digital smearing around the edges of the portrait.</p><pre id="prompt-escarlate">Maintain the exact facial structure, bone features, skin tone, eye shape, and identity of the person from the uploaded reference photo without alteration.
+
+An experimental, cinematic editorial portrait of the subject captured in an intense monochromatic scarlet-red and amber color palette.
+
+The subject is shown in profile with head tilted back and chin raised upward, with eyes partially closed in deep introspection and lips parted softly. Dressed in a dark oversized jacket that fades into deep shadow. Messy, textured hair falls across the forehead and cheek.
+
+The left side of the portrait features sharp, cinematic facial lighting illuminated by a glowing warm backlight, while the right side of the figure dissolves into horizontal pixel-drag streaks, high-speed shutter smear, and glitchy motion trails stretching across the dark canvas.
+
+Subtle horizontal CRT scanlines, fine analog video grain, high micro-contrast, vibrant red-orange luminescence contrasting against deep black shadows. Shot on an 85mm lens.</pre><button class="btn copy" data-copy="prompt-escarlate">Copy prompt</button><p class="reading"><strong>How to review:</strong> Did the texture turn into noise across the whole image? Reduce the number of fragments and concentrate them along one edge.</p></article>
+<article id="azul"><figure style="margin:24px 0;max-width:400px"><img src="../assets/azul.png" alt="Electric-blue shutter turn" width="941" height="1672" loading="lazy" style="display:block;width:100%;height:auto;border-radius:14px"></figure><h3>Long-exposure shutter turn</h3><p>Residual face positions that suggest a single continuous turn.</p><pre id="prompt-azul">Use the uploaded photo as the face reference. Keep the face, features and hairstyle exactly the same.
+
+Cinematic motion blur portrait, vertical 9:16. The person is turned three-quarters, chin slightly up, eyes closed or looking past the camera. Long-exposure effect: the face stays sharp while a ghosted, horizontally smeared copy of the head and shoulders trails to one side, as if the shutter stayed open while they turned.
+
+Background: one saturated color field in [ELECTRIC BLUE / BLOOD ORANGE], glowing brighter behind the head like a soft halo and fading to black at the edges. Dark oversized [COAT / HOODIE] melting into shadow.
+
+Analog film look: heavy grain, faint horizontal scan lines, slight color bleed, deep crushed blacks. Moody editorial album-cover mood. No text, no logos.</pre><button class="btn copy" data-copy="prompt-azul">Copy prompt</button><p class="reading"><strong>How to review:</strong> Do the faces look pasted on? Ask for fewer echoes, lower opacity and alignment with the arc of the same rotation.</p></article>
+<p id="copy-status" role="status" aria-live="polite"></p></div></section>
+<section id="template"><div class="wrap reading"><h2>Customize the 9:16 template</h2><p>In the fourth prompt, replace <code>[ELECTRIC BLUE / BLOOD ORANGE]</code> with <code>ELECTRIC BLUE</code> for electric blue or <code>BLOOD ORANGE</code> for blood orange. Replace <code>[COAT / HOODIE]</code> with <code>COAT</code> for a coat or <code>HOODIE</code> for a hooded sweatshirt. Remove the brackets and the option you did not choose.</p><p>In the tool, select vertical 9:16 format when available. In the first three prompts, add <code>Vertical portrait, 9:16 composition.</code> if you want to keep the same format across the series. 9:16 is an aspect ratio, not a required resolution.</p><h3>Understand the intent behind camera terms</h3><p>“Rim lighting” highlights the outline. “Scanlines” are horizontal scanning lines. “Pixel drag” means stretched pixels. “50mm f/1.8” and “85mm” are aesthetic cues in the prompt; they do not prove that a real lens, aperture or photographic capture was used.</p><h3>Resolve conflicts with your reference</h3><p>The scarlet prompt asks for messy hair; if that changes the person’s hairstyle, replace that sentence with <code>Preserve the exact hairstyle from the reference photo.</code> Red and amber form a warm color family here: avoid adding blue, green and violet in the same generation. The template asks for heavy grain; reduce it if it obscures the skin.</p><h3>Guardrails to add</h3><pre id="prompt-guardrails">Keep the eyes, nose and lips of the main face sharp. Preserve the person's facial features, age and hairstyle. Use one dominant color family plus black. No busy background, props, bright accessories, text, logos or watermarks. Avoid flat, evenly lit beauty lighting; keep deep shadows.</pre><button class="btn copy" data-copy="prompt-guardrails">Copy guardrails</button></div></section><section id="revisao"><div class="wrap"><h2>What to fix before saving</h2><div class="table-wrap"><table><thead><tr><th>Sign in the result</th><th>Adjustment for the next attempt</th></tr></thead><tbody><tr><td>Different eyes, nose or mouth</td><td>Return to the original photo. Reduce the effect and reinforce facial feature preservation.</td></tr><tr><td>A second person seems to appear</td><td>Ask for a less opaque echo behind the face, connected to the same rotation.</td></tr><tr><td>All the neon colors compete</td><td>Choose a single saturated color and keep everything else dark or neutral.</td></tr><tr><td>A trail with no direction</td><td>Describe the movement and the side where the residue remains. Specify the left or right side of the image.</td></tr><tr><td>Skin disappears into texture</td><td>Remove texture from the face. Keep grain or scanlines only in the background.</td></tr><tr><td>The image looks flat</td><td>Ask for side lighting and deep shadows while keeping the features readable.</td></tr></tbody></table></div></div></section>
+<section id="pratica"><div class="wrap reading"><h2>Practice: build a series of four</h2><p>Use the same reference for all four recipes. Keep the crop and compare results side by side. A series can vary the trail style while keeping the person and editorial intent recognizable.</p><ol><li>Start with cyan and approve the face.</li><li>Return to the original reference to test violet, scarlet and blue.</li><li>Choose the best result from each direction.</li><li>Reject any image with altered facial features, even if the effect looks beautiful.</li><li>Choose a use: an artist portrait, personal identity, poster or editorial study. Add text later in a layout editor.</li></ol><h3>Completion criteria</h3><p>You are finished when every version keeps the face recognizable, uses one dominant color, has a directional trail and leaves the eyes, nose and mouth readable. If one version fails, correct that version; there is no need to remake the whole series.</p><label for="notes"><strong>Record your next adjustment</strong></label><p class="mut">Notes are saved only in this browser. Do not include sensitive data. Clearing browser data deletes the record.</p><textarea id="notes" placeholder="Chosen style, what worked and one change to try..."></textarea><button class="btn copy" id="save-notes">Save notes</button><p id="notes-status" role="status"></p></div></section>
+<section id="fontes"><div class="wrap reading"><h2>Source and limitations of this guide</h2><p>Editorial basis: “Motion echo portraits: turn a face into a neon editorial series,” a Markdown file supplied by the user. The full text of the <a href="https://claude.ai/artifact/Nv7zTyiGMpFiq4n6WpvarD" target="_blank" rel="noopener">Motion Echo Portraits guide, AVCC · AI Video Creators</a> was supplied by the user after automated access was blocked. The English prompts have been preserved. The explanations, exercises and review instructions were organized for this INEMA guide.</p><p>References to VHS, digital dissolve and long exposure describe visual appearances. Simulating these effects with AI does not mean the image was captured with a camera using a long exposure.</p><p>Use the recipes as a starting point. Identity fidelity and interpretation of movement depend on the tool, the reference and human review.</p></div></section></main>
+<footer><div class="wrap"><p>Motion Echo Portraits · Open and free guide · v1.0.0</p><p><a href="https://inema.club">INEMA.CLUB</a> · <a href="https://inema.pro">INEMA.PRO</a></p></div></footer>
+<script>
+const themeButton=document.getElementById('themeToggle');
+function readStored(key){try{return localStorage.getItem(key)||''}catch{return ''}}
+function storeValue(key,value){try{localStorage.setItem(key,value);return true}catch{return false}}
+if(readStored('motion-echo-theme')==='light'){document.body.classList.add('light');themeButton.textContent='☀️'}
+themeButton.addEventListener('click',()=>{const light=document.body.classList.toggle('light');themeButton.textContent=light?'☀️':'🌙';storeValue('motion-echo-theme',light?'light':'dark')});
+document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{const target=document.getElementById(button.dataset.copy);let feedback=button.nextElementSibling;if(!feedback||!feedback.classList.contains('copy-feedback')){feedback=document.createElement('p');feedback.className='copy-feedback';feedback.setAttribute('role','status');button.after(feedback);}try{await navigator.clipboard.writeText(target.textContent);feedback.textContent='Prompt copied. Paste it into your image tool.'}catch{const range=document.createRange();range.selectNodeContents(target);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);feedback.textContent='Text selected. Use your device’s Copy option.'}}));
+const notes=document.getElementById('notes');notes.value=readStored('motion-echo-notes-en');document.getElementById('save-notes').addEventListener('click',()=>{document.getElementById('notes-status').textContent=storeValue('motion-echo-notes-en',notes.value)?'Notes saved in this browser.':'Could not save. Copy your notes to a file.'});
+</script></body></html>

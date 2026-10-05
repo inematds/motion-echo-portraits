@@ -1,0 +1,30 @@
+{
+  "generator": "native image_gen in this session, no external API key loaded",
+  "date": "2026-10-05",
+  "images": [
+    {
+      "style": "violeta",
+      "file": "guia/assets/violeta.png",
+      "original": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-6df35e49-8df3-4446-9143-aa97418f6c18.png",
+      "note": "Fictional subject. Original illustration; style prompt adapted, not literal supplied prompt."
+    },
+    {
+      "style": "ciano",
+      "file": "guia/assets/ciano.png",
+      "original": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-95f98ff3-9d10-4d29-b2b5-af34685d81f3.png",
+      "note": "Fictional subject. Original illustration; style prompt adapted, not literal supplied prompt."
+    },
+    {
+      "style": "escarlate",
+      "file": "guia/assets/escarlate.png",
+      "original": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-dd090ed6-ea42-47a2-836f-0809e944044d.png",
+      "note": "Fictional subject. Original illustration; style prompt adapted, not literal supplied prompt."
+    },
+    {
+      "style": "azul",
+      "file": "guia/assets/azul.png",
+      "original": "/home/nmaldaner/.codex/generated_images/01a10e1a-350e-77b1-b0e2-b6532c8a1fe1/exec-1e93b936-2774-4e15-a142-c3d81b170c87.png",
+      "note": "Fictional subject. Original illustration; style prompt adapted, not literal supplied prompt."
+    }
+  ]
+}

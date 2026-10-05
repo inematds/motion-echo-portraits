@@ -1,0 +1,7 @@
+# Direção visual
+
+Página de leitura no padrão fixado projetos-landing-guia: CSS base preservado, fundo grafite, acento âmbar, links institucionais INEMA.CLUB e PRO, Sora/Inter e alternância clara. Fluxo: compreender efeito → preparar foto → aplicar receita → revisar → registrar próximo ajuste. Prompts originais em inglês preservados nos três idiomas. Quatro ilustrações novas com pessoas fictícias apresentam as direções violeta, ciano, escarlate e azul; os textos identificam os prompts adaptados e deixam explícito que não demonstram preservação de identidade nem execução literal dos originais.
+
+Guia local disponível em PT/EN/ES. Verificação do construtor nos três idiomas, em 360 e 1440 px: sem overflow, imagens carregadas, cópia, tema e notas funcionais. Comparação textual confirmou os quatro prompts originais. A revisão final identificou duas correções, aplicadas nos três idiomas: textos e links âmbar no tema claro usam #8b580f, sem alterar botões; sucesso e fallback de cópia aparecem junto ao botão acionado com role=status. A fonte confirma ambas as correções; a rodada final de interação após essas mudanças cabe ao construtor.
+
+Revisão visual dos screenshots PT confirmou tipografia, imagens e composição dentro da identidade fixada. Avisos estéticos do detector sobre fontes e hierarquia não justificam substituir o template. Estado editorial: rascunho local, sem publicação; curso depende da escolha de formato. Não canonizar o glifo de tema como sistema de ícones: ele é um controle herdado do template.

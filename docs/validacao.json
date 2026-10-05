@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-05",
+  "results": [
+    {
+      "lang": "pt-BR",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 360
+    },
+    {
+      "lang": "pt-BR",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 1440
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 360
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 1440
+    },
+    {
+      "lang": "es",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 360
+    },
+    {
+      "lang": "es",
+      "overflow": false,
+      "images": true,
+      "prompts": 5,
+      "width": 1440
+    }
+  ],
+  "clipboard": true,
+  "theme": true,
+  "notes": true,
+  "jsErrors": []
+}
