@@ -26,5 +26,12 @@
     }
   },
   "humanTest": false,
-  "publication": "pending explicit GitHub API authorization"
+  "publication": {
+    "status": "published",
+    "portalId": 319,
+    "portalCommit": "e552a0d",
+    "buscaCommit": "f06e084",
+    "proCommit": "a6e867e",
+    "pagesHttp": 200
+  }
 }

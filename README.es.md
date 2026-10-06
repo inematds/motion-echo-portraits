@@ -17,3 +17,7 @@ Versión: 1.1.0.
 ## Curso v6
 
 [Curso v6](https://inematds.github.io/motion-echo-portraits/es/landing.html) · 4 clases prácticas.
+
+## Más en INEMA.CLUB
+
+[Ver el curso en INEMA.CLUB](https://www.inema.club/cursos/319-motion-echo-v6-retratos-com-eco-de-movimento/)

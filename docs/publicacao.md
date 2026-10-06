@@ -1,12 +1,17 @@
-# Publicação preparada, ainda não executada
+# Publicação concluída — 2026-10-05
 
-Repo: inematds/motion-echo-portraits. Curso na raiz (index → landing), guia complementar em guia/. Idiomas do curso: en/ e es/; idiomas do guia: guia/en/ e guia/es/.
+Curso v6 e guia em PT/EN/ES: https://inematds.github.io/motion-echo-portraits/
 
-Entrada principal de curso no portal: Motion Echo v6 — Retratos com eco de movimento. Quatro aulas práticas para criar e revisar retratos violeta,ciano,escarlate e azul,com foto de referência e rastros controlados. Ícone 📸. Tags: Imagem, Criatividade, IA. URL: https://inematds.github.io/motion-echo-portraits/. ID será MAX(id)+1 no momento da publicação. O guia é material complementar do mesmo curso,sem duplicar o cadastro como ferramenta.
+Ficha do portal: https://www.inema.club/cursos/319-motion-echo-v6-retratos-com-eco-de-movimento/
 
-EN: Motion Echo v6 — Motion Echo Portraits; URL /en/.
-ES: Motion Echo v6 — Retratos con eco de movimiento; URL /es/.
+Publicação via git confirmada:
+- Portal: `e552a0d` — 318 cursos e 284 projetos; traduções EN/ES registradas.
+- Busca: `f06e084` — 317 cursos e 283 projetos após normalização.
+- PRO: `a6e867e` — catálogo com 318 cursos e 284 projetos.
+- Base: 18.472 itens; 2.477 resumos, 283 projetos, 157 wiki, 317 cursos, 12.399 clips, 1.393 lives, 6 telegram e 1.440 prompts. Cursos/projetos 100% classificados.
 
-Após criar o repositório público e configurar Pages: git push,validar três URLs,cadastrar curso/atualização/traduções no portal,classificar enrichment e regenerar catálogos,testar e publicar via git. Sem consultar Vercel.
+Verificação: portal 12 testes, build e TypeScript aprovados; content-base 41 testes aprovados. Pages respondeu HTTP 200 para curso e guia nos três idiomas e capa. Auditor v6 4/4 aulas com 10/10 e motor 26/26 em cada idioma. Sem teste humano real. Vercel não consultado.
 
-A API GitHub para criar repo e configurar Pages aguarda autorização explícita solicitada na conversa. Nenhuma chave de API foi carregada. Traduções usaram22chamadas pela assinatura do Codex; reserva Groq0.
+GitHub API autorizada permanentemente pelo usuário em 2026-10-05. Traduções pela assinatura Codex: 22 chamadas, reserva Groq zero.
+
+Uma publicação concorrente foi integrada preservando ambos os cursos. Alterações preexistentes ficaram fora dos commits. No PRO, o stash `motion-preserve-local` de atualizacao.json foi mantido porque o arquivo recebeu alterações concorrentes; nenhuma versão foi descartada.

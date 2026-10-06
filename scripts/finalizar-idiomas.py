@@ -21,3 +21,13 @@ for lang in ['pt','en','es']:
  if '## '+title not in txt:txt+='\n## '+title+'\n\n['+title+']('+link+') · 4 '+({'pt':'aulas práticas','en':'practical lessons','es':'clases prácticas'}[lang])+'.\n'
  txt=txt.replace('1.0.0','1.1.0');readme.write_text(txt)
 print('Links curso↔guia, seletor interno e READMEs atualizados nos3idiomas.')
+
+# Ficha definitiva do portal; reaplicável após reconstrução das páginas.
+import re
+portal='https://www.inema.club/cursos/319-motion-echo-v6-retratos-com-eco-de-movimento/'
+for lang,label,heading in [('pt','Ver a ficha no INEMA.CLUB','Mais no INEMA.CLUB'),('en','View this course on INEMA.CLUB','More on INEMA.CLUB'),('es','Ver el curso en INEMA.CLUB','Más en INEMA.CLUB')]:
+ p=r/('landing.html' if lang=='pt' else lang+'/landing.html')
+ block='<!-- inema-backlink:v1 --><p style="margin:.5rem 0 0"><a href="'+portal+'">'+label+'</a></p><!-- /inema-backlink:v1 -->'
+ p.write_text(re.sub(r'<!-- inema-backlink:v1.*?<!-- /inema-backlink:v1 -->',lambda m:block,p.read_text(),flags=re.S))
+ p=r/('README.md' if lang=='pt' else 'README.'+lang+'.md')
+ if portal not in p.read_text():p.write_text(p.read_text()+'\n## '+heading+'\n\n['+label+']('+portal+')\n')
